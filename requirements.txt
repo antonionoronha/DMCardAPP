@@ -3,3 +3,4 @@ flask-restplus
 Flask-SQLAlchemy
 pytest
 Werkzeug==0.16.1
+gunicorn==20.0.4
