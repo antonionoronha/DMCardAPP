@@ -1,1 +1,2 @@
-web: gunicorn --bind 0.0.0.0:$PORT DMCard/app:app --log-file - --log-level debug
+web: gunicorn app:app --log-file - --log-level debug
+web: gunicorn run:app
