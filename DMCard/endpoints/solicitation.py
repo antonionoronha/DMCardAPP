@@ -4,7 +4,7 @@ from DMCard.serializers.solicitation import solicitation_serializer
 from DMCard.business.solicitation import SolicitationBus
 
 ns_solicitation = api.namespace('solicitations',
-                            description='Operations related to categories')
+                            description='Operations related to solicitations')
 
 
 @ns_solicitation.route('/')

@@ -1,1 +1,1 @@
-PYTHONPATH=./ FLASK_ENV=development  python ./DMCard/app.py
+web:  python ./DMCard/app.py
