@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT app:./DMCard/app.py
+web: gunicorn --bind 0.0.0.0:$PORT ./DMCard/app.py:app
