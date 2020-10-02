@@ -3,8 +3,8 @@ from DMCard.log import log
 from flask_restplus import Api
 from sqlalchemy.orm.exc import NoResultFound
 
-api = Api(version='1.0', title='Study Diary API',
-          description='A demonstration of Flask RestPlus')
+api = Api(version='1.0', title='DMCard API',
+          description='API para solicitação de crédito')
 
 
 @api.errorhandler

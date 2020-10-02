@@ -1,7 +1,6 @@
 from flask import Flask, Blueprint
 from DMCard.restplus import api
-from DMCard.endpoints.helloworld import ns_default
-from DMCard.endpoints.category import ns_category
+from DMCard.endpoints.solicitation import ns_solicitation
 from DMCard.db import config_db
 from DMCard.log import log
 
@@ -17,8 +16,7 @@ def initialize_app(app):
     api.init_app(blueprint)
     app.register_blueprint(blueprint)
 
-    api.add_namespace(ns_default)
-    api.add_namespace(ns_category)
+    api.add_namespace(ns_solicitation)
 
 
 def main():
