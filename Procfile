@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn app:/DMCard/app.py
