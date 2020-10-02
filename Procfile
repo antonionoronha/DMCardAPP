@@ -1,1 +1,1 @@
-web: PYTHONPATH=./ FLASK_ENV=development  python ./DMCard/app.py
+web: gunicorn --bind 0.0.0.0:$PORT DMCard/app:app --log-file - --log-level debug
