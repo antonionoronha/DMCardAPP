@@ -1,2 +1,1 @@
-web: gunicorn app:app --log-file - --log-level debug
-web: gunicorn run:app
+web: python ./DMCard/app.py
