@@ -1,1 +1,1 @@
-web: gunicorn DMCard.app:app
+web: gunicorn DMCard.app:app --log-file=-
