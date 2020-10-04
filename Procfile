@@ -1,1 +1,1 @@
-web: gunicorn app:DMCard.app
+web: gunicorn DMCard.app:app
