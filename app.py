@@ -1,8 +1,8 @@
 from flask import Flask, Blueprint
-from DMCardAPI.DMCard.restplus import api
-from DMCardAPI.DMCard.endpoints.solicitation import ns_solicitation
-from DMCardAPI.DMCard.db import config_db
-from DMCardAPI.DMCard.log import log
+from DMCard.restplus import api
+from DMCard.endpoints.solicitation import ns_solicitation
+from DMCard.db import config_db
+from DMCard.log import log
 from flask_cors import CORS
 
 app = Flask(__name__)
