@@ -26,3 +26,4 @@ sqlparse==0.3.1
 toml==0.10.1
 Werkzeug==0.16.1
 zipp==3.2.0
+Flask-Cors==3.0.9
