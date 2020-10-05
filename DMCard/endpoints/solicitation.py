@@ -2,10 +2,10 @@ from DMCard.restplus import api
 from flask_restplus import Resource
 from DMCard.serializers.solicitation import solicitation_serializer
 from DMCard.business.solicitation import SolicitationBus
+from flask_cors import CORS, cross_origin
 
 ns_solicitation = api.namespace('solicitations',
                             description='Operations related to solicitations')
-
 
 @ns_solicitation.route('/')
 class SolicitationCollection(Resource):
@@ -22,7 +22,6 @@ class SolicitationCollection(Resource):
     @api.marshal_with(solicitation_serializer, code=201)
     def post(self):
         return self.bus.add(api.payload['client'],api.payload['address'],api.payload['income'])
-
 
 @ns_solicitation.route('/<int:id>')
 @api.response(404, 'Solicitation not found.')

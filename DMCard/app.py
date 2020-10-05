@@ -3,16 +3,19 @@ from DMCard.restplus import api
 from DMCard.endpoints.solicitation import ns_solicitation
 from DMCard.db import config_db
 from DMCard.log import log
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+cors = CORS(app)
 
 def initialize_app(app):
     app.config['RESTPLUS_VALIDATE'] = True
     app.config['ERROR_404_HELP'] = False
+    app.config['CORS_HEADERS'] = 'Content-Type'
 
     config_db(app)
     blueprint = Blueprint('api', __name__)
+    CORS(blueprint)
     api.init_app(blueprint)
     app.register_blueprint(blueprint)
 
