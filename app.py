@@ -26,7 +26,7 @@ def main():
     initialize_app(app)
     log.info(
         '>>>>> Starting development server at http://{}/ <<<<<'.format(app.config['SERVER_NAME']))
-    app.run()
+    app.run(host='0.0.0.0')
 
 
 if __name__ == '__main__':
